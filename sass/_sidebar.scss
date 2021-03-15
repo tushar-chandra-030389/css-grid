@@ -7,6 +7,12 @@
     display: flex;
 
     justify-content: center;
+
+    @media only screen and (max-width: $bp-large) {
+        grid-column: full-start / full-end;
+        grid-row: 1 / 2;
+        justify-content: flex-end;
+    }
 }
 
 .nav-btn {
@@ -16,7 +22,12 @@
     background-color: #fff;
     height: 2px;
     width: 4.5rem;
-    
+
+    transform: translateY(4rem);
+
+    @media only screen and (max-width: $bp-large) {
+        transform: translate(-2rem, 3rem);
+    }
 
     &::before,
     &::after {
